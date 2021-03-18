@@ -1,12 +1,4 @@
-/*Uma parte do código já foi disponibilizada junto com a atividade (no arquivo CPF.java) e deve ser aproveitada.
 
-O arquivo CPF.java tem a seguinte estrutura:
-1) Solicita que a pessoa informe os 9 primeiros dígitos do CPF e os guarda em uma String.
-2) Converte a String informada pela pessoa para um vetor de int.
-3) Utiliza o vetor de int para fazer os cálculos e descobrir os dois últimos dígitos.
-4) Converte o CPF final de vetor de int para String e o exibe no console.
-
-No código compartilhado, as partes 1, 2 e 4 já foram implementadas e não devem ser alteradas. Você precisa apenas fazer a parte 3.*/
 package cpf;
 
 import java.util.Scanner;
@@ -49,17 +41,12 @@ public class CPF {
                         numero11=0;
                     }           return numero11;   
     }   
-    // Esta função converte o CPF (os 9 dígitos informados na entrada) de String para um vetor de int
-    // Também insere dois 0 no fim, para completar os 11 dí­gitos de um CPF
-    // Ex.: "963852741" vira [9, 6, 3, 8, 5, 2, 7, 4, 1, 0, 0]
     static int[] converterStringParaVetorInt(String cpfString) {
         int[] cpfNumerico = new int[11];
         for (int i = 0; i < cpfString.length(); i++) {
             cpfNumerico[i] = Character.getNumericValue(cpfString.charAt(i));
         } return cpfNumerico;
     }  
-    // Esta função converte o CPF de vetor de int (usado nos cálculos) para String
-    // Ex.: [9, 6, 3, 8, 5, 2, 7, 4, 1, 2, 8] vira "96385274128"
     static String converterVetorIntParaString(int[] cpfNumerico) {
         String cpfString = "";
         for (int i = 0; i < cpfNumerico.length; i++) {
